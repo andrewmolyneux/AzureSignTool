@@ -61,7 +61,7 @@ namespace AzureSignTool
             {
                 if (!authenticationFailure)
                 {
-                    _logger.LogError($"Failed to retrieve certificate {configuration.AzureKeyVaultCertificateName} from Azure Key Vault. Please verify the name of the certificate and the permissions to the certificate.");
+                    _logger.LogError(e, $"Failed to retrieve certificate {configuration.AzureKeyVaultCertificateName} from Azure Key Vault. Please verify the name of the certificate and the permissions to the certificate.");
                 }
                 return e;
             }
